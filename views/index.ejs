@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"
+    integrity="sha512-6kvhZ/39gRVLmoM/6JxbbJVTYzL/gnbDVsHACLx/31IREU4l3sI7yeO0d4gw8xU5Mpmm/17LMaDHOCf+TvuC2Q=="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- icon -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Righteous&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <title>Portfoli</title>
+  <style>
+    .mails details > summary {
+      list-style-type: '📧';
+    }
+    
+    .mails details[open] > summary {
+      list-style-type: '📜';
+    }
+  </style>
+</head>
+<body>
+
+  <div id="div0" class="targetDiv" >
+    <div class="descriptionk" >
+      <span class="hide">X</span>
+       <h1>All Messages</h1>
+      <% allMessages.forEach(function(message){ %>
+        <div class="mails" >
+            <details>
+              <summary >
+                <span style="font-size: 16px;" ><%= message.mailId %></span><br/>
+                <span style="font-size: 12px; position: relative; left: 15px; opacity: 0.5;" ><%= message.subject %></span>
+                <span style="margin-left: 35px; opacity: 0.5; font-size: 12px;" ><%= message.date %></span>
+              </summary>
+              <div class="mailBody" >
+               <p style="opacity: 0.7; font-size: 12px; overflow: hidden;" ><%= message.mailId %><span style="margin-left: 5px; margin-right: 5px;" >>></span><%= message.subject %></p>
+               <p><%= message.name %>,</p>
+               <p><%= message.message %></p>
+              </div>
+            </details>
+            <div class="delButton" >
+              <a href="/delete/<%= message._id %>" >✗</a>
+            </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+
+
+
+  <div id="div1" class="targetDiv">
+    <div class="description">
+      <span class="hide">X</span>
+      <h1>Bank Clone</h1>
+      <p style="font-size: 13px; margin: -15px;"  >Full Stack Project</p>
+      <div id="treeCont">
+        <div class="tree" style="min-width: 2450px">
+          <ul>
+            <li>
+              <a>Bank Lynx</a>
+              <ul>
+
+                <li>
+                  <a>Admin Site</a>
+                  <ul>
+                    <li>
+                      <a>Data Entry</a>
+                      <ul>
+                        <li>
+                          <a>Deposit Entry</a>
+                        </li>
+                        <li>
+                          <a>Withdrawal Entry</a>
+                        </li>
+                        <li>
+                          <a>Loan Entry</a>
+                        </li>
+                        <li>
+                          <a>EMI Entry</a>
+                        </li>
+                        <li>
+                          <a>Fixed Deposit</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a>Approvals</a>
+                      <ul>
+                        <li>
+                          <a>FixedDeposit Approval</a>
+                        </li>
+                        <li>
+                          <a>Loan Approval</a>
+                        </li>
+                        <li>
+                          <a>EMI Approval</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a>Details</a>
+                      <ul>
+                        <li>
+                          <a>Customer Details</a>
+                        </li>
+                        <li>
+                          <a>Transaction Details</a>
+                        </li>
+                        <li>
+                          <a>Loan Details</a>
+                        </li>
+                        <li>
+                          <a>EMI Details</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a>Customer Registration</a>
+                    </li>
+                    <li>
+                      <a>Update</a>
+                    </li>
+                  </ul>
+                </li>
+
+
+                <li>
+                  <a>Customer Site</a>
+                  <ul>
+                    <li>
+                      <a>Transaction Details</a>
+                    </li>
+                    <li>
+                      <a>Money Transfer</a>
+                    </li>
+                    <li>
+                      <a>Loan Application</a>
+                    </li>
+                    <li>
+                      <a>EMI Start</a>
+                    </li>
+                    <li>
+                      <a>Fixed Deposit</a>
+                    </li>
+                    <li>
+                      <a>Customer Details</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+
+      <div style="text-align: left; padding:15px ;">
+        <h2>Summary :- </h2>
+        <p>
+          This is a banking website, Which is divided in two different part. One is for banker and another one is for
+          customers who want to use online services of the bank.
+          The Banker can do several Actions as well As the customers
+        </p>
+
+        <p><span style="font-size: 20px; font-weight: 500; ">Banker Site :- </span>
+          This Part is only for the banker. And to enter in this part of the website banker need to have a user id and a
+          password.
+          Which Bank manager will provide the banker, That's why in this part we don't have any sign up action for
+          security purpose.
+          After login banker will have some actions like <span style="font-size: 16px; font-weight: 600;">Deposit
+            Entry</span>,
+          <span style="font-size: 16px; font-weight: 600;">Withdrawal Entry</span>, <span
+            style="font-size: 16px; font-weight: 600;">
+            Loan Entry</span>, <span style="font-size: 16px; font-weight: 600;">EMI Entry</span>, <span
+            style="font-size: 16px; font-weight: 600;">
+            FixedDeposit Approval</span>, <span style="font-size: 16px; font-weight: 600;">Loan Approval</span>, <span
+            style="font-size: 16px; font-weight: 600;">
+            EMI Approval</span>, <span style="font-size: 16px; font-weight: 600;">Customer Details</span>, <span
+            style="font-size: 16px; font-weight: 600;">
+            Transaction Details</span>, <span style="font-size: 16px; font-weight: 600;">Loan Details</span>, <span
+            style="font-size: 16px; font-weight: 600;">
+            EMI Details</span>, <span style="font-size: 16px; font-weight: 600;">Customer Registration</span>, <span
+            style="font-size: 16px; font-weight: 600;">
+            Update</span>.
+        </p>
+
+        <p><span style="font-size: 20px; font-weight: 500;">Customer Site :- </span>
+          This Part of the website only for those, who alreay have a bank account. For the first time any customer need
+          to do sign up at first.
+          To signup, the customer should have a secret key of 6 digit. Which the manager will provide the customer.
+          After signUp any customer can log in
+          using the account no. And the newly generated password. After login customer will have some actions like <span
+            style="font-size: 16px; font-weight: 600;">
+            Transaction Details</span>, <span style="font-size: 16px; font-weight: 600;">Money Transfer</span>, <span
+            style="font-size: 16px; font-weight: 600;">
+            Loan Application</span>, <span style="font-size: 16px; font-weight: 600;">EMI Start Application</span>,
+          <span style="font-size: 16px; font-weight: 600;">
+            Fixed Deposit</span>, <span style="font-size: 16px; font-weight: 600;">Customer Details</span>
+        </p>
+        <h2>Used Technologies :- </h2>
+        <div style="padding-left: 10px;">
+          <details>
+            <summary>bcrypt</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To encrypt the passwords</p>
+          </details>
+          <details>
+            <summary>cryptr</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To encrypt the URLs</p>
+          </details>
+          <details>
+            <summary>ejs</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">For layout and Template</p>
+          </details>
+          <details>
+            <summary>mongoose</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To manage MongoDB DataBase</p>
+          </details>
+          <details>
+            <summary>multer</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To upload files</p>
+          </details>
+          <details>
+            <summary>nodemailer</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To sent emails</p>
+          </details>
+          <details>
+            <summary>express js</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To build server</p>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- <div id="div2" class="targetDiv" >
+    <div class="description">
+      <span  class="hide" >X</span>
+      <h1>ML</h1>
+    </div>
+  </div> -->
+
+
+  <div id="div3" class="targetDiv">
+    <div class="description">
+      <span class="hide">X</span>
+      <h1>ToDo List</h1>
+      <p style="font-size: 13px; margin: -15px;"  >Full Stack Project</p>
+      <div id="treeCont">
+        <div class="tree" style="min-width: 1000px">
+          <ul>
+            <li>
+              <a>ToDo List</a>
+              <ul>
+                <li>
+                  <a>Lists Title (if List Exist)</a>
+                  <ul>
+                    <li>
+                      <a>List Items</a>
+                      <ul>
+                        <li>
+                          <a>Add Item</a>
+                        </li>
+                        <li>
+                          <a>Done</a>
+                        </li>
+                        <li>
+                          <a>Delete Single</a>
+                        </li>
+                        <li>
+                          <a>Delete All</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a>Delete List</a>
+                    </li>
+                    <li>
+                      <a>Create List</a>
+                    </li>
+                    <li>
+                      <a>Show List</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a>Create List</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="text-align: left; padding:15px ;">
+        <h2>Summary :- </h2>
+        <p>
+          This is a toDo list Website where you can create different Lists. And you can also add items under those
+          lists. You can mark a list items as Done,
+        </p>
+        <p>
+          You can delete a single list item, you can also delete all the list items and also you can delete the list(
+          automatically all list items will be delete for this action ) .
+        </p>
+        <p>
+          To use this website, first you have to signUp with a unique id and a password. later to access this account
+          you have to use the same id & password.
+          If you are a new use then first you have to create a list, then you can add new list items.
+        </p>
+        <h2>Used Technologies :- </h2>
+        <div style="padding-left: 10px;">
+          <details>
+            <summary>ejs</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">For layout and Template</p>
+          </details>
+          <details>
+            <summary>mongoose</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To manage MongoDB DataBase</p>
+          </details>
+          <details>
+            <summary>express js</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To build server</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="div4" class="targetDiv">
+    <div class="description">
+      <span class="hide">X</span>
+      <h1>Flipkart Clone</h1>
+      <p style="font-size: 13px; margin: -15px;"  >MERN Stack Project</p>
+      <div>
+        <div id="treeCont">
+          <div class="tree" style="min-width: 4600px">
+            <ul>
+              <li>
+                <a>Flipkart Clone</a>
+                <ul>
+                  <li>
+                    <a>Search Bar</a>
+                    <ul>
+                      <li>
+                        <a>Product List</a>
+                        <ul>
+                          <li>
+                            <a>Add to cart</a>
+                          </li>
+                          <li>
+                            <a>Product Deatils</a>
+                            <ul>
+                              <li>
+                                <a>Add to cart</a>
+                              </li>
+                              <li>
+                                <a>Buy Now</a>
+                                <ul>
+                                  <li>
+                                    <a>Different Steps to Confirm Order</a>
+                                    <ul>
+                                      <li>
+                                        <a>Orders</a>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a>Cart</a>
+                    <ul>
+                      <li>
+                        <a>Product</a>
+                        <ul>
+                          <li>
+                            <a>Product Details</a>
+                          </li>
+                          <li>
+                            <a>Remove Product</a>
+                          </li>
+                          <li>
+                            <a>Increase Number of Product</a>
+                          </li>
+                          <li>
+                            <a>Decrease Number of Product</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a>Price Details</a>
+                      </li>
+                      <li>
+                        <a>Place Order</a>
+                        <ul>
+                          <li>
+                            <a>Different Steps to Confirm Order</a>
+                            <ul>
+                              <li>
+                                <a>Orders</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a>Order</a>
+                    <ul>
+                      <li>
+                        <a>Orders</a>
+                        <ul>
+                          <li>
+                            <a>Order Details</a>
+                            <ul>
+                              <li>
+                                <a>Orders Tracker</a>
+                              </li>
+                              <li>
+                                <a>Product Details</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a>Nav Option</a>
+                    <ul>
+                      <li>
+                        <a>Products List By Category</a>
+                        <ul>
+                          <li>
+                            <a>Add to cart</a>
+                          </li>
+                          <li>
+                            <a>Product Deatils</a>
+                            <ul>
+                              <li>
+                                <a>Add to cart</a>
+                              </li>
+                              <li>
+                                <a>Buy Now</a>
+                                <ul>
+                                  <li>
+                                    <a>Different Steps to Confirm Order</a>
+                                    <ul>
+                                      <li>
+                                        <a>Orders</a>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a>Banners</a>
+                    <ul>
+                      <li>
+                        <a>Products List By Banners Category</a>
+                        <ul>
+                          <li>
+                            <a>Add to cart</a>
+                          </li>
+                          <li>
+                            <a>Product Deatils</a>
+                            <ul>
+                              <li>
+                                <a>Add to cart</a>
+                              </li>
+                              <li>
+                                <a>Buy Now</a>
+                                <ul>
+                                  <li>
+                                    <a>Different Steps to Confirm Order</a>
+                                    <ul>
+                                      <li>
+                                        <a>Orders</a>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a>Offer Carousel</a>
+                    <ul>
+                      <li>
+                        <a>Offer Category</a>
+                        <ul>
+                          <li>
+                            <a>Products List By Category</a>
+                            <ul>
+                              <li>
+                                <a>Add to cart</a>
+                              </li>
+                              <li>
+                                <a>Product Deatils</a>
+                                <ul>
+                                  <li>
+                                    <a>Add to cart</a>
+                                  </li>
+                                  <li>
+                                    <a>Buy Now</a>
+                                    <ul>
+                                      <li>
+                                        <a>Different Steps to Confirm Order</a>
+                                        <ul>
+                                          <li>
+                                            <a>Orders</a>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a>Show All Offers</a>
+                        <ul>
+                          <li>
+                            <a>All Offers Category</a>
+                            <ul>
+                              <li>
+                                <a>Products List By Category</a>
+                                <ul>
+                                  <li>
+                                    <a>Add to cart</a>
+                                  </li>
+                                  <li>
+                                    <a>Product Deatils</a>
+                                    <ul>
+                                      <li>
+                                        <a>Add to cart</a>
+                                      </li>
+                                      <li>
+                                        <a>Buy Now</a>
+                                        <ul>
+                                          <li>
+                                            <a>Different Steps to Confirm Order</a>
+                                            <ul>
+                                              <li>
+                                                <a>Orders</a>
+                                              </li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a>Login</a>
+                  </li>
+                  <li>
+                    <a>Sign Up</a>
+                  </li>
+                  <li>
+                    <a>Log Out</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: left; padding:15px ;">
+        <h2>Summary :- </h2>
+        <p>
+          This is a ecommerce website (Flipkart Clone). It have navigation bar with different categories. It have some
+          carousel banner. It has a search bar also at the top. and it also have some categories for offers section.
+          This is all about our website's homepage.
+        </p>
+        <p>
+          Now If you search anything, base on that it will show you all the product with the same text. and from there
+          you can see any product's details, in the list and also you can add to cart that item
+        </p>
+        <p>
+          For the navbar, if you click on any category in the drop-down menu it will show you all the products list
+          under that category. From That list you can see product details and also you can add the product to cart.
+        </p>
+        <p>
+          For the banner, if you click on any banner it will take you to the category with which that banner is mapped
+          (Like for banner Apple product, if you click on it , it will show you all the iphones). and you will see
+          all the product under that category. Then you can see product details and you can add that product to cart.
+        </p>
+        <p>
+          And For the Offers section, there are lots of offfer carousel base on category like fashion, electronics etc.
+          From here if click on any poster it will show you all the products list under that offer. And if you click on
+          "VIEW ALL".
+          It will show all the offers under that category of section. From here if click on any poster it will show you
+          all the products list under that offer. then you can see product details and you can add the product to cart.
+        </p>
+        <p>
+          Now from all the sections, you can also order the product, but to order the product first you have to create a
+          account using the login drop-down button or if you already have a account you have to login, then you can order the
+          product.
+        </p>
+        <p>
+          Another feature is . after login all the products you add to cart, at unlogin state, will be added in your
+          account after login.
+        </p>
+
+        <p>
+          If you notice carefully you can see that to show products I used 3 different layout first is for phones,
+          laptos and many others , second is for jeans, Topwear and many others and finaly third one is for apple under
+          mobile category.
+        </p>
+
+        <p>
+          After login in cart section you can place order all the products in the cart. and if you want to remove any
+          product or, increase or decrease any product's quantity.
+        </p>
+        <p>
+          I order section you can see you all the orders and if you click on any ordre it will show you order details
+          and the status of your order with a tracker.
+        </p>
+        <h2>Used Technologies :- </h2>
+        <div style="padding-left: 10px;">
+          <details>
+            <summary>Reactjs</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">For fontend fremework</p>
+          </details>
+          <details>
+            <summary>Material-ui</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">For fontend fremework and for icons</p>
+          </details>
+          <details>
+            <summary>React-Redux</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To manage data</p>
+          </details>
+          <details>
+            <summary>Axios</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">For API call</p>
+          </details>
+          <details>
+            <summary>JWT</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">For Authentication</p>
+          </details>
+          <details>
+            <summary>bcrypt</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To encrypt the passwords</p>
+          </details>
+          <details>
+            <summary>mongoose</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To manage MongoDB DataBase</p>
+          </details>
+          <details>
+            <summary>express js</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To build server</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="div5" class="targetDiv">
+    <div class="description">
+      <span class="hide">X</span>
+      <h1>Movie Searcher</h1>
+      <p style="font-size: 13px; margin: -15px;"  >Front-End Project</p>
+      <div>
+        <div id="treeCont">
+          <div class="tree" style="min-width: 1000px">
+            <ul>
+              <li>
+                <a>Movie Searcher</a>
+                <ul>
+                  <li>
+                    <a>Search Bar</a>
+                    <ul>
+                      <li>
+                        <a>Just Enter The Text No Need to Click</a>
+                        <ul>
+                          <li>
+                            <a>Movies With the Searched Text</a>
+                            <ul>
+                              <li>
+                                <a>Movie Details</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a>Banner</a>
+                  </li>
+                  <li>
+                    <a>Carousel Of Movies With Different Category</a>
+                    <ul>
+                      <li>
+                        <a>Movie Details</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a>Footer</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: left; padding:15px ;">
+        <h2>Summary :- </h2>
+        <p>
+          This is a movie Searcher Website. It is React Base fontend Website. At the top there is a search bar, where
+          you just need to enter the text and wait for the result, beacuse for search you don't need to click any
+          button. then it will show you all the
+          movies which have that text in it's title. Now if you click on any movie it will show you all the details
+          about the movie.
+        </p>
+        <p>
+          Next there is a banner carousel with 3 different movie poster. and the coolest thing is if you reface the page it will
+          show you different movie poster in the carousel all the times.
+        </p>
+        <p>
+          Then there are three different categories on movies. which containt lots of movies. and if you click on this
+          movies it will show you the movie details.
+        </p>
+        <p>I use OMDB api and TMDB api for all the data</p>
+        <h2>Used Technologies :- </h2>
+        <div style="padding-left: 10px;">
+          <details>
+            <summary>Reactjs</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">For fontend fremework</p>
+          </details>
+          <details>
+            <summary>Material-ui</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">For fontend fremework and for icons</p>
+          </details>
+          <details>
+            <summary>Axios</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">For API call</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="div6" class="targetDiv">
+    <div class="description">
+      <span class="hide">X</span>
+      <h1>Flipkart Admin Website Clone</h1>
+      <p style="font-size: 13px; margin: -15px;"  >MERN Stack Project</p>
+      <div>
+        <div id="treeCont">
+          <div class="tree" style="min-width: 2700px">
+            <ul>
+              <li>
+                <a>Flipkart Admin Website Clone</a>
+                <ul>
+                  <li>
+                    <a>SignIn</a>
+                    <ul>
+                      <li>
+                        <a>Home</a>
+                        <ul>
+                          <li>
+                            <a>Amdin Details</a>
+                          </li>
+                          <li>
+                            <a>User Details</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a>Page</a>
+                        <ul>
+                          <li>
+                            <a>Pages</a>
+                          </li>
+                          <li>
+                            <a>Create Page</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a>Category</a>
+                        <ul>
+                          <li>
+                            <a>All Categories</a>
+                          </li>
+                          <li>
+                            <a>Create Category</a>
+                          </li>
+                          <li>
+                            <a>Edit Category / Edit Categories</a>
+                          </li>
+                          <li>
+                            <a>Delete Category / Categories</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a>Products</a>
+                        <ul>
+                          <li>
+                            <a>Create Product</a>
+                          </li>
+                          <li>
+                            <a>All Products</a>
+                            <ul>
+                              <li>
+                                <a>Product Details</a>
+                              </li>
+                              <li>
+                                <a>Edit Product</a>
+                              </li>
+                              <li>
+                                <a>Delete Product</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a>Orders</a>
+                        <ul>
+                          <li>
+                            <a>All Orders</a>
+                            <ul>
+                              <li>
+                                <a>All Order Related Details</a>
+                              </li>
+                              <li>
+                                <a>Order Tracker</a>
+                              </li>
+                              <li>
+                                <a>Change Order Status</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a>Create Home Page</a>
+                        <ul>
+                          <li>
+                            <a>Create Home Page</a>
+                          </li>
+                          <li>
+                            <a>Show Home Page</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a>Sign Out</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a>SignUp</a>
+                    <ul>
+                      <li>
+                        <a>SignIn</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: left; padding:15px ;">
+        <h2>Summary :- </h2>
+        <p>
+          This is ecommerce Admin website to manage the ecommerce website. This is a very important part of the
+          ecommerce website. beacuse all the contents of my ecommerce website is dynamiclly created and managed by admin,
+          like homepage, navbar, banner, products, categories etc.
+          To get access of this website you have to signup or signin at first.
+        </p>
+        <p>
+          There are 6 different pages, like home, page, category, products, orders and homepage create. All of this
+          pages have lots of actions like craete, update, delete.
+        </p>
+        <p>
+          In the first, home contain details of users and admins ( like name, email, contact Number)
+        </p>
+        <p>
+          The page is, to create page layout to show products with different types of products with banners and posters.
+          (like for apple). And you can also update the banners and posters of the page with the same action.
+        </p>
+        <P>
+          Category Page is, to create categories with parent and children. Here you can also edit and
+          delete any category.
+        </P>
+        <p>
+          products Page is, to create prodcuts with bunch of photos and details. Here you will see all the products of
+          our website. You can see all details of any products and also you can edit and delete the products.
+        </p>
+        <p>
+          Order Page is, to Handel all the order's status.
+        </p>
+        <p>
+          Create homepage is, to create banners for homepage and also to create different offer carousel (like
+          Deal_Of_The_Day, Deals_On_Tvs_And_Appliances, Furniture_Best_Sellers and many more ) with different
+          categories.
+          We can create the whole page at once or we can create the homepage one by one , like first create the banners
+          then the offer carousels like Deal_Of_The_Day and others.
+        </p>
+        <h2>Used Technologies :- </h2>
+        <div style="padding-left: 10px;">
+          <details>
+            <summary>Reactjs</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">For fontend fremework</p>
+          </details>
+          <details>
+            <summary>Material-ui</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">For fontend fremework and for icons</p>
+          </details>
+          <details>
+            <summary>React-Bootstrap</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">For fontend fremework</p>
+          </details>
+          <details>
+            <summary>React-Redux</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To manage data</p>
+          </details>
+          <details>
+            <summary>Axios</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">For API call</p>
+          </details>
+          <details>
+            <summary>JWT</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">For Authentication</p>
+          </details>
+          <details>
+            <summary>bcrypt</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To encrypt the passwords</p>
+          </details>
+          <details>
+            <summary>mongoose</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To manage MongoDB DataBase</p>
+          </details>
+          <details>
+            <summary>express js</summary>
+            <p style="margin-left: 20px; margin-top: 2px;">To build server</p>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <section id="my_home">
+    <nav id="my_navbar">
+      <img class="logo_mini" src="/media/rd_logo2.png">
+
+      <ul class="nav-links">
+        <li class="my_home"><a class="menuli" href="#my_home">Home</a></li>
+        <li class="About"><a class="menuli" href="#About">About</a></li>
+        <li class="skills"><a class="menuli" href="#skills">Skills</a></li>
+        <li class="Project"><a class="menuli" href="#Project">Projects</a></li>
+        <!-- <li><a class="menuli" href="#">More Skills</a></li> -->
+        <li class="Contact"><a class="menuli" href="#Contact">Contact</a></li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <div id="particles-js"></div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+      particlesJS.load('particles-js', '/app.json', function () {
+        console.log('callback - particles.js config loaded');
+      });
+
+    </script>
+
+    <div class="count-particles" data-aos="zoom-in-down">
+      <img class="my_logo" src="/media/rd_logo2.png"><br />
+      <h1 class="myname">Rana Debnath</h1>
+      <h1 class="tagline">Let's Create a Digital World</h1>
+      <a href="#About" class="botn_1st">Veiw My Work<i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </section>
+
+
+
+
+  <section id="About">
+
+    <div class="about_cont">
+      <div class="img_cont">
+        <img data-aos="fade-up" class="my_img" src="\media\profileimg.jpg">
+      </div>
+      <div class="text_cont">
+        <h1 data-aos="fade-up">About Me</h1>
+        <p data-aos="fade-up">Hi, I am Rana Debnath , a third year student at GCETTS, MAKAUT university, West Bengal,
+          currently pursuing my B.Tech in Computer Science & Engineering Department.<br /> I have a knack of problem
+          solving & discovering
+          new tech in the field of Web Dev. I am highly skilled on the MERN Stack with a demonstrated background of
+          creating responsive & highly funtional web design.
+          More over I also have a great command over CS fundamentals such as DBMS, OS, CN etc.<br /> Making complex and
+          analytical problems into simple and efficient solutions, may it be algorithmic. Web Dev
+          is my main focus & expertise. Having some good experience in Web Dev freelancing, I can give a impactful
+          contribution in you project.</p>
+      </div>
+    </div>
+
+
+    <div class="hire_cont">
+      <div class="text_cont" data-aos="fade-up">
+        <h1 id="hire_head" data-aos="fade-up">Why hire me?</h1>
+        <p data-aos="fade-up" >I'm Rana a full-time independent web designer based in Kolkata. My experience along with
+          my collaborative and approachable process makes me the stand out choice as your web partner to take your
+          business to the next level.<br/>
+          Over the years, I have acquired relevant skills and experience, which I shall bring to your organization.<br/>
+
+          I have also worked tirelessly on my communication abilities and teamwork skills, which I will put to use in my future career, 
+          which would be in your organization if I am selected for the position.<br/>
+        
+          On the other hand, I am a self motivated person and I try to exceed my superior’s expectations with high-quality work. 
+          Being a fast learner, I quickly pick up business knowledge related to my project.<br/>
+
+          Even though I am a fresher, I assure you that I will give my best and work to my full potential so that 
+          I can contribute as much as I can towards the growth and welfare of this great brand.
+        </p>
+      </div>
+      <div class="icon_cont" data-aos="fade-up">
+        <img data-aos="fade-up" class="my_img" src="/media/Handshake-v44.png">
+      </div>
+    </div>
+
+  </section>
+
+  <section id="skills">
+    <div data-aos="fade-up" class="titel_cont">
+      <h1>Skills</h1>
+    </div>
+
+    <div class="contOfCont">
+
+      <div class="type_cont">
+        <div data-aos="fade-up">
+          <span class="s_top"></span>
+          <div class="itcont"><img class="meter_logo" src="/media/meter (1).png" alt="meter"></div>
+          <span class="s_bottom">
+            <h1>Fast</h1>
+            <p>Fast load times and lag free interaction, my highest priority.</p>
+          </span>
+        </div>
+        <div data-aos="fade-up">
+          <span class="s_top"></span>
+          <div class="itcont"><img class="laptop_logo" src="/media/responsive.png" alt="responsive"></div>
+          <span class="s_bottom">
+            <h1>Responsive</h1>
+            <p>My layouts will work on any device, big or small.</p>
+          </span>
+        </div>
+        <div data-aos="fade-up">
+          <span class="s_top"></span>
+          <div class="itcont"><img class="rocket_logo" src="/media/rocket (1).png" alt="fast"></div>
+          <span class="s_bottom">
+            <h1>Dynamic</h1>
+            <p>Websites don't have to be static, I love making pages come to life.</p>
+          </span>
+        </div>
+      </div>
+
+    </div>
+    <div class="wrapper">
+
+      <div class="card" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">HTML & CSS</div>
+      </div>
+
+      <div class="card js" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">JavaScript</div>
+      </div>
+
+      <div class="card react" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">React JS</div>
+      </div>
+
+      <div class="card redux" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">Redux</div>
+      </div>
+
+      <div class="card node" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">Node js</div>
+      </div>
+
+      <div class="card express" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">Express js</div>
+      </div>
+
+      <div class="card Bootstrap" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">Bootstrap</div>
+      </div>
+
+      <div class="card api" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">API</div>
+      </div>
+
+      <div class="card jquery" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">Jquery</div>
+      </div>
+
+      <div class="card git" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">Git & Github</div>
+      </div>
+
+      <div class="card mysql" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">MySQL</div>
+      </div>
+
+      <div class="card MongoDB" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">MongoDB</div>
+      </div>
+
+      <div class="card python" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">Python</div>
+      </div>
+
+      <div class="card java" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">JAVA</div>
+      </div>
+
+      <div class="card cLan" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">C</div>
+      </div>
+
+      <div class="card cpp" data-aos="fade-up">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span class="skspan"></span></div>
+        </div>
+        <div class="text">C++</div>
+      </div>
+    </div>
+
+    <script>
+      let options = {
+        startAngle: -1.55,
+        size: 110,
+        value: 0.85,
+        fill: { gradient: ['#003650', '#fff'] }
+      }
+
+      $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+        function (event, progress, stepValue) {
+          $(this).parent().find(".skspan").text(String(stepValue.toFixed(2).substr(2)) + "%");
+        });
+      $(".js .bar").circleProgress({
+        value: 0.70
+      });
+      $(".react .bar").circleProgress({
+        value: 0.77
+      });
+      $(".redux .bar").circleProgress({
+        value: 0.68
+      });
+      $(".node .bar").circleProgress({
+        value: 0.70
+      });
+      $(".express .bar").circleProgress({
+        value: 0.70
+      });
+      $(".Bootstrap .bar").circleProgress({
+        value: 0.73
+      });
+      $(".api .bar").circleProgress({
+        value: 0.70
+      });
+      $(".jquery .bar").circleProgress({
+        value: 0.67
+      });
+      $(".git .bar").circleProgress({
+        value: 0.67
+      });
+      $(".mysql .bar").circleProgress({
+        value: 0.69
+      });
+      $(".MongoDB .bar").circleProgress({
+        value: 0.78
+      });
+      $(".python .bar").circleProgress({
+        value: 0.75
+      });
+      $(".java .bar").circleProgress({
+        value: 0.72
+      });
+      $(".cLan .bar").circleProgress({
+        value: 0.82
+      });
+      $(".cpp .bar").circleProgress({
+        value: 0.88
+      });
+    </script>
+  </section>
+
+  <section id="Project">
+
+
+
+
+
+    <div class="main-container">
+      <div data-aos="fade-up" class="titel_cont">
+        <h1>Project</h1>
+      </div>
+      <div class="filter-container">
+        <div class="category-head">
+          <ul>
+            <div data-aos="fade-up" class="category-title active" id="all">
+              <li>All</li>
+            </div>
+            <div data-aos="fade-up" class="category-title" id="Website_Development">
+              <li>Website Development</li>
+            </div>
+            <div data-aos="fade-up" class="category-title" id="Machine_Learning">
+              <li>Machine Learning </li>
+            </div>
+            <div data-aos="fade-up" class="category-title" id="Android_Development">
+              <li>Android Development</li>
+            </div>
+          </ul>
+        </div>
+
+        <div class="posts-collect">
+          <div class="posts-main-container">
+            <!-- single post -->
+
+
+            <div data-aos="fade-up" class="all Website_Development">
+              <a class="post-img">
+                <img src="/media/Screenshot (570).png" alt="post">
+              </a>
+              <div class="post-content">
+                <h3>Banking Website</h3>
+                <p>Full Stack Project</p>
+                <p>Node.js, Express.js, EJS, mongoDB(mongoose), multer</p>
+              </div>
+              <div class="options">
+                <div class="wrapperk">
+                  <div onclick="showDec('div1');" class="wave-btn">
+                    <span class="wave-btn__text">Description</span>
+                    <span class="wave-btn__waves"></span>
+                  </div>
+                </div>
+                <div class="wrapperk">
+                  <a target="_blank" href="http://banklynx.herokuapp.com/" class="wave-btn">
+                    <span class="wave-btn__text">Link</span>
+                    <span class="wave-btn__waves"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- end of single post -->
+            <div data-aos="fade-up" class="all Machine_Learning">
+              <a class="post-img">
+                <img src="/media/machin1.jfif" alt="post">
+              </a>
+              <div class="post-content">
+                <h3>Empty</h3>
+                <p></p>
+              </div>
+              <div class="options">
+
+                <div class="wrapperk">
+                  <div onclick="showDec('div2');" class="wave-btn">
+                    <span class="wave-btn__text">Description</span>
+                    <span class="wave-btn__waves"></span>
+                  </div>
+                </div>
+                <div class="wrapperk">
+                  <a target="_blank" class="wave-btn">
+                    <span class="wave-btn__text">Link</span>
+                    <span class="wave-btn__waves"></span>
+                  </a>
+                </div>
+
+
+              </div>
+            </div>
+            <!-- end of single post -->
+            <div data-aos="fade-up" class="all Website_Development">
+              <a class="post-img">
+                <img src="\media\imgonline-com-ua-twotoone-G2D2baom5suvfBcM.jpg" alt="post">
+              </a>
+              <div class="post-content">
+                <h3>ToDo List</h3>
+                <p>Full Stack Project</p>
+                <p>Node.js, Express.js, EJS, mongoDB(mongoose)</p>
+              </div>
+              <div class="options">
+                <div class="wrapperk">
+                  <div onclick="showDec('div3');" class="wave-btn">
+                    <span class="wave-btn__text">Description</span>
+                    <span class="wave-btn__waves"></span>
+                  </div>
+                </div>
+
+                <div class="wrapperk">
+                  <a target="_blank" href="https://rstodolist.herokuapp.com/" class="wave-btn">
+                    <span class="wave-btn__text">Link</span>
+                    <span class="wave-btn__waves"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- end of single post -->
+            <div data-aos="fade-up" class="all Website_Development">
+              <a class="post-img">
+                <img src="/media/Screenshot (761).png" alt="post">
+              </a>
+              <div class="post-content">
+                <h3>Flipkart Clone</h3>
+                <p>MERN Stack Project</p>
+                <p>Node.js, Express.js, Reactjs, mongoDB(mongoose) & more</p>
+              </div>
+              <div class="options">
+                <div class="wrapperk">
+                  <div onclick="showDec('div4');" class="wave-btn">
+                    <span class="wave-btn__text">Description</span>
+                    <span class="wave-btn__waves"></span>
+                  </div>
+                </div>
+
+                <div class="wrapperk">
+                  <a target="_blank" href="https://flipkart-clone-cefea.web.app/" class="wave-btn">
+                    <span class="wave-btn__text">Link</span>
+                    <span class="wave-btn__waves"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- end of single post -->
+            <div data-aos="fade-up" class="all Machine_Learning">
+              <a class="post-img">
+                <img src="/media/machin2.jfif" alt="post">
+              </a>
+              <div class="post-content">
+                <h3>Empty</h3>
+                <p></p>
+              </div>
+              <div class="options">
+                <div class="wrapperk">
+                  <div class="wave-btn">
+                    <span class="wave-btn__text">Description</span>
+                    <span class="wave-btn__waves"></span>
+                  </div>
+                </div>
+
+                <div class="wrapperk">
+                  <div class="wave-btn">
+                    <span class="wave-btn__text">Link</span>
+                    <span class="wave-btn__waves"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of single post -->
+            <div data-aos="fade-up" class="all Website_Development">
+              <a class="post-img">
+                <img src="\media\Screenshot (574).png" alt="post">
+              </a>
+              <div class="post-content">
+                <h3>Movie Searcher</h3>
+                <p>Frontend Project</p>
+                <p>React js, material-ui, Axios, API</p>
+              </div>
+              <div class="options">
+                <div class="wrapperk">
+                  <div onclick="showDec('div5');" class="wave-btn">
+                    <span class="wave-btn__text">Description</span>
+                    <span class="wave-btn__waves"></span>
+                  </div>
+                </div>
+
+                <div class="wrapperk">
+                  <a target="_blank" href="https://movie-searcher-19f9c.web.app/" class="wave-btn">
+                    <span class="wave-btn__text">Link</span>
+                    <span class="wave-btn__waves"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- end of single post -->
+            <div data-aos="fade-up" class="all Website_Development">
+              <a class="post-img">
+                <img src="/media/Screenshot (762).png" alt="post">
+              </a>
+              <div class="post-content">
+                <h3>Flipkart Admin Website Clone</h3>
+                <p>MERN Stack Project</p>
+                <p>Node.js, Express.js, Reactjs, mongoDB(mongoose) & more</p>
+              </div>
+              <div class="options">
+                <div class="wrapperk">
+                  <div onclick="showDec('div6');" class="wave-btn">
+                    <span class="wave-btn__text">Description</span>
+                    <span class="wave-btn__waves"></span>
+                  </div>
+                </div>
+
+                <div class="wrapperk">
+                  <a target="_blank" href="https://flipkart-admin-clone.web.app/" class="wave-btn">
+                    <span class="wave-btn__text">Link</span>
+                    <span class="wave-btn__waves"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- end of single post -->
+            <div data-aos="fade-up" class="all Android_Development">
+              <a class="post-img">
+                <img src="/media/Android.png" alt="post">
+              </a>
+              <div class="post-content">
+                <h3>Empty</h3>
+                <p></p>
+              </div>
+              <div class="options">
+                <div class="wrapperk">
+                  <div class="wave-btn">
+                    <span class="wave-btn__text">Description</span>
+                    <span class="wave-btn__waves"></span>
+                  </div>
+                </div>
+
+                <div class="wrapperk">
+                  <div class="wave-btn">
+                    <span class="wave-btn__text">Link</span>
+                    <span class="wave-btn__waves"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of single post -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="Contact">
+
+    <div data-aos="fade-up" class="ContactTitel">
+      <h1>Contect Me</h1>
+    </div>
+
+
+    <div class="contactCont">
+      <div class="contLoca">
+        <div class="loca">
+
+          <div data-aos="fade-up" class="locaCont">
+            <a target="_blank"
+              href="https://www.google.com/maps/place/Nandai+Bridge,+West+Bengal/@23.3142519,88.3144658,413m/data=!3m2!1e3!4b1!4m5!3m4!1s0x39f8fcd023c70711:0x13e8c6e823eea036!8m2!3d23.3142519!4d88.3155601"><img
+                src="/media/location.png" alt="location"></a>
+            <div class="textC">
+              <h1>Adress</h1>
+              <p>STKK Road<br />Purba Burdwan,West Bengal,India<br />713519</p>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" class="locaCont">
+            <img id="phoneimg" src="/media/phone_logo.png" alt="phone">
+            <div class="textC">
+              <h1>Phone No.</h1>
+              <p>+91 9735023047</p>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" class="locaCont">
+            <img src="/media/email_logo (1).png" alt="">
+            <div class="textC">
+              <h1>Email</h1>
+              <p>ranadebnath619@gmail.com</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="msg">
+        <p style="font-size: 20px; color: rgb(253, 251, 251);" >Message Me</p>
+        <form action="/mailResponse" class="msgInput" method="POST">
+          <input data-aos="fade-up" name="userName" type="text" autocomplete="off" placeholder="NAME">
+          <input data-aos="fade-up" name="userEmail" type="email" autocomplete="off" placeholder="MAIL ID">
+          <input data-aos="fade-up" name="userSubject" type="text" autocomplete="off" placeholder="SUBJECT">
+          <textarea data-aos="fade-up" name="userMsg" placeholder="MESSAGE"></textarea>
+
+          <button data-aos="fade-up" class="msgSent send-button" id="submit" type="submit" value="SEND">
+            <div class="msgbtn">
+              <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+            </div>
+
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="footer">
+    <div class="iconCont">
+      <a target="_blank" href="https://www.linkedin.com/in/rana-debnath-9a86771b0"><i
+          class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
+      <a target="_blank" href="https://www.facebook.com/rs.debnath.71"><i id="fackicon"
+          class="fab fa-facebook-f"></i><span>Facebook</span></a>
+      <a target="_blank" href="https://instagram.com/rs.debnath.71?igshid=12irpc8yomamu"><i
+          class="fab fa-instagram"></i><span>Instagram</span></a>
+      <a target="_blank" href="https://twitter.com/RanaDeb46607092?s=08"><i
+          class="fab fa-twitter"></i><span>Twitter</span></a>
+      <a target="_blank" href="https://github.com/Rana619"><i class="fab fa-github"></i><span>Github</span></a>
+    </div>
+    <div class="msgShow"  onclick="showDec('div0');"></div>
+    <p style="color: white;">ranadebnath©2021</p>
+  </section>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="/functionility.js"></script>
+  <script src="/app.js"></script>
+
+
+
+</body>
+
+</html>
