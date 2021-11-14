@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,42 +31,66 @@
     href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/style.css" />
-  <title>Portfoli</title>
+  <title>devRana</title>
   <style>
-    .mails details > summary {
+    .mails details>summary {
       list-style-type: '📧';
     }
-    
-    .mails details[open] > summary {
+
+    .mails details[open]>summary {
       list-style-type: '📜';
     }
   </style>
 </head>
-<body>
 
-  <div id="div0" class="targetDiv" >
-    <div class="descriptionk" >
+<body onload="myFunction()" >
+
+<div id="preLoader" >
+  <div class="loader">
+    <span class="loader-inner-1"></span>
+    <span class="loader-inner-2"></span>
+    <span class="loader-inner-3"></span>
+    <span class="loader-inner-4"></span>
+  </div>
+</div>
+
+
+  <div id="div0" class="targetDiv">
+    <div class="descriptionk">
       <span class="hide">X</span>
-       <h1>All Messages</h1>
+      <h1>All Messages</h1>
       <% allMessages.forEach(function(message){ %>
-        <div class="mails" >
-            <details>
-              <summary >
-                <span style="font-size: 16px;" ><%= message.mailId %></span><br/>
-                <span style="font-size: 12px; position: relative; left: 15px; opacity: 0.5;" ><%= message.subject %></span>
-                <span style="margin-left: 35px; opacity: 0.5; font-size: 12px;" ><%= message.date %></span>
-              </summary>
-              <div class="mailBody" >
-               <p style="opacity: 0.7; font-size: 12px; overflow: hidden;" ><%= message.mailId %><span style="margin-left: 5px; margin-right: 5px;" >>></span><%= message.subject %></p>
-               <p><%= message.name %>,</p>
-               <p><%= message.message %></p>
-              </div>
-            </details>
-            <div class="delButton" >
-              <a href="/delete/<%= message._id %>" >✗</a>
+        <div class="mails">
+          <details>
+            <summary>
+              <span style="font-size: 16px;">
+                <%= message.mailId %>
+              </span><br />
+              <span style="font-size: 12px; position: relative; left: 15px; opacity: 0.5;">
+                <%= message.subject %>
+              </span>
+              <span style="margin-left: 35px; opacity: 0.5; font-size: 12px;">
+                <%= message.date %>
+              </span>
+            </summary>
+            <div class="mailBody">
+              <p style="opacity: 0.7; font-size: 12px; overflow: hidden;">
+                <%= message.mailId %><span style="margin-left: 5px; margin-right: 5px;">>></span>
+                  <%= message.subject %>
+              </p>
+              <p>
+                <%= message.name %>,
+              </p>
+              <p>
+                <%= message.message %>
+              </p>
             </div>
+          </details>
+          <div class="delButton">
+            <a href="/delete/<%= message._id %>">✗</a>
+          </div>
         </div>
-      <% }) %>
+        <% }) %>
     </div>
   </div>
 
@@ -77,7 +100,7 @@
     <div class="description">
       <span class="hide">X</span>
       <h1>Bank Clone</h1>
-      <p style="font-size: 13px; margin: -15px;"  >Full Stack Project</p>
+      <p style="font-size: 13px; margin: -15px;">Full Stack Project</p>
       <div id="treeCont">
         <div class="tree" style="min-width: 2450px">
           <ul>
@@ -272,7 +295,7 @@
     <div class="description">
       <span class="hide">X</span>
       <h1>ToDo List</h1>
-      <p style="font-size: 13px; margin: -15px;"  >Full Stack Project</p>
+      <p style="font-size: 13px; margin: -15px;">Full Stack Project</p>
       <div id="treeCont">
         <div class="tree" style="min-width: 1000px">
           <ul>
@@ -357,7 +380,7 @@
     <div class="description">
       <span class="hide">X</span>
       <h1>Flipkart Clone</h1>
-      <p style="font-size: 13px; margin: -15px;"  >MERN Stack Project</p>
+      <p style="font-size: 13px; margin: -15px;">MERN Stack Project</p>
       <div>
         <div id="treeCont">
           <div class="tree" style="min-width: 4600px">
@@ -648,7 +671,8 @@
         </p>
         <p>
           Now from all the sections, you can also order the product, but to order the product first you have to create a
-          account using the login drop-down button or if you already have a account you have to login, then you can order the
+          account using the login drop-down button or if you already have a account you have to login, then you can
+          order the
           product.
         </p>
         <p>
@@ -713,7 +737,7 @@
     <div class="description">
       <span class="hide">X</span>
       <h1>Movie Searcher</h1>
-      <p style="font-size: 13px; margin: -15px;"  >Front-End Project</p>
+      <p style="font-size: 13px; margin: -15px;">Front-End Project</p>
       <div>
         <div id="treeCont">
           <div class="tree" style="min-width: 1000px">
@@ -769,7 +793,8 @@
           about the movie.
         </p>
         <p>
-          Next there is a banner carousel with 3 different movie poster. and the coolest thing is if you reface the page it will
+          Next there is a banner carousel with 3 different movie poster. and the coolest thing is if you reface the page
+          it will
           show you different movie poster in the carousel all the times.
         </p>
         <p>
@@ -801,7 +826,7 @@
     <div class="description">
       <span class="hide">X</span>
       <h1>Flipkart Admin Website Clone</h1>
-      <p style="font-size: 13px; margin: -15px;"  >MERN Stack Project</p>
+      <p style="font-size: 13px; margin: -15px;">MERN Stack Project</p>
       <div>
         <div id="treeCont">
           <div class="tree" style="min-width: 2700px">
@@ -927,7 +952,8 @@
         <h2>Summary :- </h2>
         <p>
           This is ecommerce Admin website to manage the ecommerce website. This is a very important part of the
-          ecommerce website. beacuse all the contents of my ecommerce website is dynamiclly created and managed by admin,
+          ecommerce website. beacuse all the contents of my ecommerce website is dynamiclly created and managed by
+          admin,
           like homepage, navbar, banner, products, categories etc.
           To get access of this website you have to signup or signin at first.
         </p>
@@ -1073,18 +1099,21 @@
     <div class="hire_cont">
       <div class="text_cont" data-aos="fade-up">
         <h1 id="hire_head" data-aos="fade-up">Why hire me?</h1>
-        <p data-aos="fade-up" >I'm Rana a full-time independent web designer based in Kolkata. My experience along with
+        <p data-aos="fade-up">I'm Rana a full-time independent web designer based in Kolkata. My experience along with
           my collaborative and approachable process makes me the stand out choice as your web partner to take your
-          business to the next level.<br/>
-          Over the years, I have acquired relevant skills and experience, which I shall bring to your organization.<br/>
+          business to the next level.<br />
+          Over the years, I have acquired relevant skills and experience, which I shall bring to your
+          organization.<br />
 
-          I have also worked tirelessly on my communication abilities and teamwork skills, which I will put to use in my future career, 
-          which would be in your organization if I am selected for the position.<br/>
-        
-          On the other hand, I am a self motivated person and I try to exceed my superior’s expectations with high-quality work. 
-          Being a fast learner, I quickly pick up business knowledge related to my project.<br/>
+          I have also worked tirelessly on my communication abilities and teamwork skills, which I will put to use in my
+          future career,
+          which would be in your organization if I am selected for the position.<br />
 
-          Even though I am a fresher, I assure you that I will give my best and work to my full potential so that 
+          On the other hand, I am a self motivated person and I try to exceed my superior’s expectations with
+          high-quality work.
+          Being a fast learner, I quickly pick up business knowledge related to my project.<br />
+
+          Even though I am a fresher, I assure you that I will give my best and work to my full potential so that
           I can contribute as much as I can towards the growth and welfare of this great brand.
         </p>
       </div>
@@ -1608,7 +1637,7 @@
       </div>
 
       <div class="msg">
-        <p style="font-size: 20px; color: rgb(253, 251, 251);" >Message Me</p>
+        <p style="font-size: 20px; color: rgb(253, 251, 251);">Message Me</p>
         <form action="/mailResponse" class="msgInput" method="POST">
           <input data-aos="fade-up" name="userName" type="text" autocomplete="off" placeholder="NAME">
           <input data-aos="fade-up" name="userEmail" type="email" autocomplete="off" placeholder="MAIL ID">
@@ -1638,7 +1667,7 @@
           class="fab fa-twitter"></i><span>Twitter</span></a>
       <a target="_blank" href="https://github.com/Rana619"><i class="fab fa-github"></i><span>Github</span></a>
     </div>
-    <div class="msgShow"  onclick="showDec('div0');"></div>
+    <div class="msgShow" onclick="showDec('div0');"></div>
     <p style="color: white;">ranadebnath©2021</p>
   </section>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -1647,7 +1676,13 @@
   <script src="/functionility.js"></script>
   <script src="/app.js"></script>
 
-
+  <script>
+    let preloder = document.getElementById("preLoader");
+    function myFunction()
+    {
+      preloder.style.display = "none";
+    }
+  </script>
 
 </body>
 
