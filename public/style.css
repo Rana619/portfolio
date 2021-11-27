@@ -1085,9 +1085,17 @@ right connector from last child*/
 .tree li a:hover+ul ul::before{
 	border-color:  rgb(121, 119, 119);
 }
+.videoCont{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-
-
+.videos{
+  width: 630px;
+  height: 350px;
+}
 
 
 
@@ -1507,6 +1515,8 @@ right connector from last child*/
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
     z-index: 999;
+    margin-top: 0px;
+    padding-left: 10px;
 }
 
 
@@ -1519,7 +1529,10 @@ right connector from last child*/
     cursor: pointer;
 }
 
-
+.videos{
+  width: 330px;
+  height: 180px;
+}
 
   /* skills */
   .wrapper{
