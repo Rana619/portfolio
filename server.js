@@ -12,7 +12,9 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use(express.static("public"));
 env.config();
 
-const connection_url = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@cluster0.shack.mongodb.net/${process.env.MONGODB_NAME}?retryWrites=true&w=majority`;
+console.log(process.env)
+
+const connection_url = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@cluster0.shack.mongodb.net/MessageDB?retryWrites=true&w=majority`;
 const ConnectMongoDB = async ()=>{
   await  mongoose.connect(connection_url)
     .then(() => {
